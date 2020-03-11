@@ -126,10 +126,12 @@ function main {
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
-      echo "Known hosts:"
-      cat ~/.ssh/known_hosts
-      echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-      cat ~/.ssh/config
+      cat > ~/.ssh/config <<- EOM
+      host github.com
+        hostname github.com
+        user git
+        identityfile ~/.ssh/id_rsa
+      EOM
   fi
 
   parseInputs
