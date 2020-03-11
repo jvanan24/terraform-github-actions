@@ -128,6 +128,7 @@ function main {
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
       echo "Known hosts:"
       cat ~/.ssh/known_hosts
+      echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   fi
 
   parseInputs
