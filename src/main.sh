@@ -129,6 +129,7 @@ function main {
       echo "Known hosts:"
       cat ~/.ssh/known_hosts
       echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+      cat ~/.ssh/config
   fi
 
   parseInputs
