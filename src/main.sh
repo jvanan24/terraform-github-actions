@@ -127,6 +127,7 @@ function main {
       chmod 600 ~/.ssh/id_rsa
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
       echo "MyHome : " $HOME
+      ls -artl $HOME/.ssh
       echo "SSH config done"
   fi
 
