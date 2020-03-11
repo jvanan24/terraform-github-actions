@@ -121,6 +121,7 @@ function main {
   then
       echo "No SSH key configured"
   else
+      echo "Configuring SSH"
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
   fi
