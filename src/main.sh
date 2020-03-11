@@ -115,6 +115,15 @@ function main {
   source ${scriptDir}/terraform_import.sh
   source ${scriptDir}/terraform_taint.sh
   source ${scriptDir}/terraform_destroy.sh
+  
+  # SSH config
+  if [ -z "$GH_PRIVATE_SSH" ]
+  then
+      echo "No SSH key configured"
+  else
+      echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
+      chmod 600 ~/.ssh/id_rsa
+  fi
 
   parseInputs
   configureCLICredentials
