@@ -132,6 +132,7 @@ function main {
         user git
         identityfile ~/.ssh/id_rsa
       EOM
+      echo "SSH config done"
   fi
 
   parseInputs
