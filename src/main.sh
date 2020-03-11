@@ -126,12 +126,12 @@ function main {
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
-      cat > ~/.ssh/config <<- EOM
+      cat <<EOF > ~/.ssh/config
       host github.com
         hostname github.com
         user git
         identityfile ~/.ssh/id_rsa
-      EOM
+      EOF
       echo "SSH config done"
   fi
 
