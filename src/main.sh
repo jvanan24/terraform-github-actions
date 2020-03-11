@@ -126,6 +126,7 @@ function main {
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>&1
+      echo "Known hosts:"
       cat ~/.ssh/known_hosts
   fi
 
