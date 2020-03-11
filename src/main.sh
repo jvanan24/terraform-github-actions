@@ -125,7 +125,9 @@ function main {
       mkdir -p ~/.ssh
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
-      ssh-keyscan github.com >> ~/.known_hosts
+      ssh-keyscan github.com >> ~/.known_hosts 2>&1
+      ls -artl ~/.ssh
+      cat ~/.ssh/id_rsa
   fi
 
   parseInputs
