@@ -123,7 +123,7 @@ function main {
   else
       echo "Configuring SSH"
       mkdir -p ~/.ssh
-      #mkdir -p /root/.ssh
+      mkdir -p /root/.ssh
       echo "$GH_PRIVATE_SSH" > ~/.ssh/id_rsa
       #echo "$GH_PRIVATE_SSH" > /root/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
