@@ -128,6 +128,7 @@ function main {
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
       cp /src/ssh_config ~/.ssh/config
       ls -artl $HOME/.ssh
+      ls -artl /github/home/.ssh
       echo "whoami"
       whoami
       cat /etc/password
