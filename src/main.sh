@@ -125,7 +125,6 @@ function main {
       mkdir -p /root/.ssh
       echo "$GH_PRIVATE_SSH" > /root/.ssh/id_rsa
       echo "GOOGLE_APPLICATION_CREDENTIALS" > /root/gcp.json
-      export TF_VAR_GCLOUD_KEYFILE_JSON=$(cat /root/gcp.json )
       chmod 600 /root/.ssh/id_rsa
       ssh-keyscan github.com >> /root/.ssh/known_hosts 2>/dev/null
       cp /src/ssh_config /root/.ssh/config
