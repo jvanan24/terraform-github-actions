@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ssh git@github.com -i /github/home/.ssh/id_rsa
+
 function terraformInit {
   # Gather the output of `terraform init`.
   echo "init: info: initializing Terraform configuration in ${tfWorkingDir}"
