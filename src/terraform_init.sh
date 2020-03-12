@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ssh git@github.com -i /github/home/.ssh/id_rsa
+whoami
 
 function terraformInit {
   # Gather the output of `terraform init`.
