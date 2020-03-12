@@ -130,6 +130,8 @@ function main {
       ls -artl $HOME/.ssh
       echo "whoami"
       whoami
+      echo "ssh test"
+      ssh git@github.com
       echo "SSH config done"
   fi
 
