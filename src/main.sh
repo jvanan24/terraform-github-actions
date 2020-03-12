@@ -128,8 +128,8 @@ function main {
       chmod 600 ~/.ssh/id_rsa
       ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
       ssh-keyscan github.com >> /root/.ssh/known_hosts 2>/dev/null
-      cp /src/ssh_config ~/.ssh/config
-      #cp /src/ssh_config /root/.ssh/config
+      #cp /src/ssh_config ~/.ssh/config
+      cp /src/ssh_config /root/.ssh/config
       echo "SSH config done"
   fi
 
